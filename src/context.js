@@ -22,6 +22,12 @@ function RoomProvider({ children }) {
         });
         return tempItems;
     };
+   
+    const getRoom = (slug) => {
+        let tempRooms = [...context.rooms];
+        const room = tempRooms.find(room => room.slug === slug);
+        return room;
+    };
 
     useEffect(() => {
         let rooms = formatData(items);
@@ -36,7 +42,7 @@ function RoomProvider({ children }) {
     }, []);
 
     return (
-        <RoomContext.Provider value={{ ...context }}>
+        <RoomContext.Provider value={{ ...context, getRoom}}>
             {children}
         </RoomContext.Provider>
     );

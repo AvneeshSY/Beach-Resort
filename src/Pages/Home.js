@@ -4,6 +4,7 @@ import Banner from "../component/Banner";
 import { Link } from "react-router-dom";
 import Services from "../component/Services";
 import FeatureRoom from "../component/Featureroom";
+// import Button from "../component/StyledHero";
 
 function Home() {
     return (
@@ -18,6 +19,7 @@ function Home() {
             </Hero>
             <Services/>
             <FeatureRoom/>
+            {/* <Button>Hello</Button> */}
         </>
     )
 }
